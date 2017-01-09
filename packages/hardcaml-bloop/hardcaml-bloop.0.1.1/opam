@@ -1,0 +1,24 @@
+opam-version: "1.2"
+maintainer: "andy.ray@ujamjar.com"
+authors: "andy.ray@ujamjar.com"
+homepage: "https://github.com/ujamjar/hardcaml-bloop"
+bug-reports: "https://github.com/ujamjar/hardcaml-bloop/issues"
+license: "ISC"
+dev-repo: "https://github.com/ujamjar/hardcaml-bloop.git"
+substs: "pkg/META"
+build: ["ocaml" "pkg/pkg.ml" "build"]
+depends: [
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build}
+  "base-bytes"
+  "astring"
+  "hardcaml" {>= "1.2.0" & < "2.0.0"}
+  "sattools"
+  "bdd"
+  "uchar"
+  "uutf"
+  "gg"
+  "vg"
+]
+available: [ocaml-version >= "4.02.2"]
