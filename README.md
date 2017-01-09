@@ -47,6 +47,7 @@ And while were at it, add `license: "ISC"`
 
 ### makefile 
 
+```
 VERSION      := $$(opam query --version)
 NAME_VERSION := $$(opam query --name-version)
 ARCHIVE      := $$(opam query --archive)
@@ -61,6 +62,7 @@ prepare:
 publish:
 	opam publish submit -r hardcaml $(NAME_VERSION)
 	rm -rf $(NAME_VERSION)
+```
 
 ### Release process
 
