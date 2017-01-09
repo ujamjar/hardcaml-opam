@@ -1,0 +1,22 @@
+opam-version: "1.2"
+maintainer: "andy.ray@ujamjar.com"
+authors: "andy.ray@ujamjar.com"
+homepage: "https://github.com/ujamjar/hardcaml-vpi"
+bug-reports: "https://github.com/ujamjar/hardcaml-vpi/issues"
+license: "ISC"
+dev-repo: "https://github.com/ujamjar/hardcaml-vpi.git"
+substs: "pkg/META"
+build: [make "vpi"]
+depends: [
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build}
+  "ctypes"
+  "ctypes-foreign"
+  "hardcaml" {>= "1.2.0" & < "2.0.0"}
+]
+depexts: [
+  [["homebrew" "osx"] ["icarus-verilog"]]
+  [["ubuntu"] ["iverilog"]]
+]
+available: [os != "darwin" & ocaml-version >= "4.02.0"]
