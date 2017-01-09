@@ -30,4 +30,4 @@ depends: [
   "astring"
 ]
 depopts: ["camlp4" "ctypes" "ctypes-foreign" "js_of_ocaml" "lwt"]
-available: ["ocaml-version" >= "4.01.0"]
+available: [ocaml-version >= "4.01.0"]
