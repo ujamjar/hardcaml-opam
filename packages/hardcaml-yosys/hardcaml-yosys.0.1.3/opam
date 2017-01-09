@@ -1,0 +1,20 @@
+opam-version: "1.2"
+maintainer: "Andy Ray <andy.ray@ujamjar.com>"
+authors: "Andy Ray"
+homepage: "https://github.com/ujamjar/hardcaml-yosys"
+bug-reports: "https://github.com/ujamjar/hardcaml-yosys/issues"
+license: "ISC"
+dev-repo: "https://github.com/ujamjar/hardcaml-yosys.git"
+substs: "pkg/META"
+build: ["ocaml" "pkg/pkg.ml" "build"]
+depends: [
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+  "topkg" {build}
+  "atdgen"
+  "camlp4"
+  "hardcaml" {>= "1.2.0" & < "2.0.0"}
+  "ppx_hardcaml"
+  "ppx_deriving_hardcaml"
+]
+available: [ocaml-version >= "4.02.0"]
